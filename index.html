@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daarwin Kanna | Velkadamban - Historiographer & Technologist</title>
+    <meta name="description"
+        content="Portfolio of Daarwin Kanna (Velkadamban). M. Archaeology & History, Heritage Conservation, Researcher, Lecturer, and Tech Innovator blending AI and History.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800;900&family=Mukta+Malar:wght@800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-theme"> <!-- Default Elite Dark Theme -->
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo tamil-brand">
+                <span class="brand-text">வேல்கடம்பன்</span>
+                <!-- Fallback if they wanted to use an actual image later -->
+                <!-- <img src="assets/img/logo.png" class="brand-img" alt="Logo"> -->
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-wrapper">
+                <li><a href="#portfolio" class="nav-link">My Work</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link btn-contact">Contact</a></li>
+                <!-- Theme Toggle Button -->
+                <li>
+                    <button id="theme-toggle" class="theme-toggle magnetic" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon dark-icon"></i>
+                        <i class="fa-solid fa-sun light-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in-up">
+            <div class="subtitle-badge">
+                <span class="badge-dot"></span>
+                Historiographer & Technologist
+            </div>
+            <h1 class="hero-title">
+                Hi! I'm <br>
+                <span class="text-gradient-gold">Daarwin Kanna</span> <br>
+                <span class="hero-aka">(a) Velkadamban</span>
+            </h1>
+            <p class="hero-desc">
+                Bridging ancient heritage with bleeding-edge technology.
+            </p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary magnetic">View My Work</a>
+            </div>
+        </div>
+
+        <!-- Profile Picture & Abstract Graphic -->
+        <div class="hero-visual fade-in">
+            <div class="profile-container glass-panel">
+                <!-- IMPORTANT: Replace the src below with your actual image path when ready. Ex: assets/img/profile.jpg -->
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Daarwin Kanna" class="profile-img">
+
+                <div class="floating-badge badge-1 glass-card">
+                    <i class="fa-solid fa-scroll card-icon gold-icon"></i>
+                    <div>
+                        <span class="card-title">40+</span>
+                        <span class="card-sub">Inscriptions</span>
+                    </div>
+                </div>
+                <div class="floating-badge badge-2 glass-card">
+                    <i class="fa-solid fa-microchip card-icon teal-icon"></i>
+                    <div>
+                        <span class="card-title">AI Vision</span>
+                        <span class="card-sub">Pioneer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section with Tabs -->
+    <section class="portfolio-section section-padding" id="portfolio">
+        <div class="container reveal">
+            <div class="section-header center">
+                <h2 class="section-title">Selected Works</h2>
+                <p class="section-subtitle">Comprehensive archive of research and technical achievements.</p>
+            </div>
+
+            <!-- Tab Toggle Buttons -->
+            <div class="portfolio-tabs magnetic-nav">
+                <button class="tab-btn active" id="history-tab" data-target="history-content" data-group="main">
+                    History - Tamil
+                </button>
+                <button class="tab-btn" id="tech-tab" data-target="tech-content" data-group="main">
+                    Tech & Innovation
+                </button>
+            </div>
+
+            <!-- HISTORY MAIN CONTENT -->
+            <div class="tab-content active" id="history-content" data-group="main">
+                <!-- History Sub Tabs -->
+                <div class="sub-tabs-container">
+                    <button class="tab-btn sub-tab-btn active" data-target="hist-research"
+                        data-group="history-subs">Research</button>
+                    <button class="tab-btn sub-tab-btn" data-target="hist-discoveries"
+                        data-group="history-subs">Discoveries</button>
+                    <button class="tab-btn sub-tab-btn" data-target="hist-projects"
+                        data-group="history-subs">Projects</button>
+                    <button class="tab-btn sub-tab-btn" data-target="hist-papers"
+                        data-group="history-subs">Papers</button>
+                </div>
+
+                <!-- History Sub Contents -->
+                <div class="tab-content active" id="hist-research" data-group="history-subs">
+                    <div class="elite-list-grid">
+                        <div class="elite-list-item glass-panel">
+                            <h4>Palaiyarai (Chola Capital)</h4>
+                            <p>Comprehensive fieldwork and mapping of the ancient capital. Reconstructed water systems,
+                                royal roads, and palace remains.</p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>Taiwan & Tamil Tribes</h4>
+                            <p>Comparative linguistic and cultural research connecting the Kavalan tribes of Taiwan with
+                                Tamil ethnic groups.</p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>Sri Lanka Heritage</h4>
+                            <p>Extensive field investigations on Hindu/Buddhist temple architecture and documentation of
+                                tribal cultures.</p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>Kumari Kandam</h4>
+                            <p>Associate researcher with Late Mr. Orissa Balu on the study of the submerged ancient
+                                Tamil land.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="hist-discoveries" data-group="history-subs">
+                    <div class="elite-list-grid">
+                        <div class="elite-list-item glass-panel">
+                            <h4>40+ Unrecorded Epigraphs</h4>
+                            <p>Discovered inscriptions at Thiruppurambiyam, Tanjore Manambuchavadi, Pattukottai
+                                Soorapallam, and more.</p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>Nathamalai Sluice</h4>
+                            <p>Identified and documented 11 distinct inscriptions on the large sluice at Nathamalai.</p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>Excavation Sites</h4>
+                            <p>Identified 650+ potential archaeological sites across Tamil Nadu and Northern Sri Lanka.
+                            </p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>Paleontological Mapping</h4>
+                            <p>Mapped sites in Ariyalur and Perambalur districts, analyzing industrial impact on
+                                heritage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="hist-projects" data-group="history-subs">
+                    <div class="elite-list-grid">
+                        <div class="elite-list-item glass-panel">
+                            <h4>Palm Manuscript Digitization</h4>
+                            <p>Preserved 'Yaanai Maruthuvam' (Elephant Medicine) and 'Vaindanai' songs through high-res
+                                digitization.</p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>3D Artifact Modeling</h4>
+                            <p>Created 3D digital twins of artifacts discovered in Palaiyarai for conservation and
+                                study.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="hist-papers" data-group="history-subs">
+                    <div class="elite-list-grid">
+                        <div class="elite-list-item glass-panel">
+                            <h4>Palaiyarai: The Forgotten Capital</h4>
+                            <p>Authored a forthcoming research book on the historical significance of the Chola city.
+                            </p>
+                        </div>
+                        <div class="elite-list-item glass-panel">
+                            <h4>Ancient Tamil Digits AI</h4>
+                            <p>Published research on recognizing 10th-century Tamil numbers using Convolutional Neural
+                                Networks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TECH MAIN CONTENT -->
+            <div class="tab-content" id="tech-content" data-group="main">
+                <!-- Tech Sub Tabs -->
+                <div class="sub-tabs-container">
+                    <button class="tab-btn sub-tab-btn active" data-target="tech-software"
+                        data-group="tech-subs">Software</button>
+                    <button class="tab-btn sub-tab-btn" data-target="tech-hardware"
+                        data-group="tech-subs">Hardware</button>
+                </div>
+
+                <!-- SOFTWARE Sub Content -->
+                <div class="tab-content active" id="tech-software" data-group="tech-subs">
+                    <!-- Deep Nested Tabs for Software -->
+                    <div class="sub-sub-tabs-container">
+                        <button class="tab-btn pill-btn active" data-target="soft-papers"
+                            data-group="soft-subs">Papers</button>
+                        <button class="tab-btn pill-btn" data-target="soft-projects"
+                            data-group="soft-subs">Projects</button>
+                    </div>
+
+                    <div class="tab-content active" id="soft-papers" data-group="soft-subs">
+                        <div class="elite-list-item glass-panel small-padding">
+                            <h5>Ancient Tamil Digits Recognition using CNN</h5>
+                            <span class="meta-tag">DOI:10.1063/5.0224624</span>
+                            <p>Developed a Deep Learning model with TensorFlow/Keras to read inscriptions.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="soft-projects" data-group="soft-subs">
+                        <div class="elite-list-grid">
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>Tamil Numeral & Measurement App</h5>
+                                <p>First Android app on PlayStore featuring ancient Tamil fractions and numerals.</p>
+                            </div>
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>Open Source Python Libraries</h5>
+                                <p>Published libraries for converting modern units to ancient Tamil measurement systems.
+                                </p>
+                            </div>
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>Jigsaw Puzzle Game</h5>
+                                <p>Educational game featuring Tamil lifestyle imagery for diaspora children.</p>
+                            </div>
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>Web Development</h5>
+                                <p>Developed 30+ websites for international clients under 'VaanKon'.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HARDWARE Sub Content -->
+                <div class="tab-content" id="tech-hardware" data-group="tech-subs">
+                    <!-- Deep Nested Tabs for Hardware -->
+                    <div class="sub-sub-tabs-container">
+                        <button class="tab-btn pill-btn active" data-target="hard-papers"
+                            data-group="hard-subs">Papers</button>
+                        <button class="tab-btn pill-btn" data-target="hard-projects"
+                            data-group="hard-subs">Projects</button>
+                    </div>
+
+                    <div class="tab-content active" id="hard-papers" data-group="hard-subs">
+                        <div class="empty-state">
+                            <span>Hardware research details documented within project reports.</span>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="hard-projects" data-group="hard-subs">
+                        <div class="elite-list-grid">
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>IoT Solar Trackers</h5>
+                                <p>Designed intelligent solar tracking systems for optimized energy efficiency.</p>
+                            </div>
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>Fire-Fighting Robots</h5>
+                                <p>Autonomous robotics systems designed for hazard detection and suppression.</p>
+                            </div>
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>Nano Satellites</h5>
+                                <p>Development and educational mentorship on small-scale satellite systems.</p>
+                            </div>
+                            <div class="elite-list-item glass-panel small-padding">
+                                <h5>OpenCV Systems</h5>
+                                <p>Computer vision hardware implementations for real-time tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Awards Section -->
+    <section class="awards section-padding" id="achievements">
+        <div class="container reveal">
+            <div class="section-header center">
+                <h2 class="section-title">Honors & Impact</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="split-layout">
+                <div class="split-col glass-panel">
+                    <h3>Teaching & Mentorship Impact</h3>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-number text-gradient-teal">4,000+</span>
+                            <span class="metric-label">Students taught in Epigraphy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-number text-gradient-teal">100+</span>
+                            <span class="metric-label">Webinars & Global Meetings</span>
+                        </div>
+                    </div>
+                    <p class="mt-4">Mentored students globally on ancient history, artifact conservation, and advanced
+                        technologies like Web Dev and App building.</p>
+                </div>
+
+                <div class="split-col glass-panel awards-col">
+                    <h3>Awards & Recognition</h3>
+                    <ul class="award-list">
+                        <li>
+                            <div class="award-year">2023</div>
+                            <div class="award-info">
+                                <strong>Ariventhal Award</strong>
+                                <span>For outstanding historical research</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="award-year">2022</div>
+                            <div class="award-info">
+                                <strong>Young Archeologist Award</strong>
+                                <span>Nallor Vattam</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="award-year">2022</div>
+                            <div class="award-info">
+                                <strong>Mummudi Chozhan Award</strong>
+                                <span>For historical and technological contribution in young age</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="award-year">2019</div>
+                            <div class="award-info">
+                                <strong>Best Design - Innovation</strong>
+                                <span>Innovation Expo</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2 class="tamil-brand">
+                        <span class="brand-text">வேல்கடம்பன்</span>
+                        <!-- <img src="assets/img/logo.png" class="brand-img" alt="Logo"> -->
+                    </h2>
+                    <p>Molding the heritage of the past with the innovations of the future.</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <a href="mailto:velkadamban@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i>
+                        velkadamban@gmail.com</a>
+                    <a href="tel:+919489236687" class="contact-link"><i class="fa-solid fa-phone"></i> +91 94892
+                        36687</a>
+                    <span class="contact-link"><i class="fa-solid fa-location-dot"></i> Aranthangi, Tamil Nadu,
+                        India</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Daarwin Kanna (Velkadamban). Crafted with passion and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
