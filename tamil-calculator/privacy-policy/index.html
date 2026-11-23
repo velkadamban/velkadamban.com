@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tamil Calculator | Velkadamban</title>
+    <meta name="description" content="Privacy Policy for Tamil Calculator mobile application developed by Daarwin Kanna M (Velkadamban).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d0f17;
+            --surface: #151824;
+            --surface-border: #232738;
+            --text-primary: #e6e8ee;
+            --text-secondary: #9aa1b5;
+            --accent: #4e80ee;
+            --accent-hover: #3b6cd9;
+            --success: #34d399;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-title: 'Outfit', var(--font-main);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.7;
+            font-size: 16px;
+            padding: 24px 16px 64px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header-bar {
+            max-width: 840px;
+            margin: 0 auto 32px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        .brand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: color 0.2s ease;
+        }
+
+        .brand-link:hover {
+            color: var(--accent);
+        }
+
+        .home-badge {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 6px 14px;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .home-badge:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+        }
+
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 16px;
+            padding: 48px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 28px 20px;
+            }
+        }
+
+        h1 {
+            font-family: var(--font-title);
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .app-meta {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .highlight-box {
+            background: rgba(52, 211, 153, 0.08);
+            border: 1px solid rgba(52, 211, 153, 0.25);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .highlight-box .badge {
+            background: var(--success);
+            color: #064e3b;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            flex-shrink: 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #e6f9f0;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-family: var(--font-title);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin: 10px 0 18px 24px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        .meta-list {
+            margin: 16px 0 24px 0;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--surface-border);
+            border-radius: 10px;
+            list-style: none;
+        }
+
+        .meta-list li {
+            margin-bottom: 6px;
+            font-size: 0.92rem;
+        }
+
+        .meta-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .meta-list strong {
+            color: var(--text-primary);
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--surface-border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-bar">
+        <a href="/" class="brand-link">
+            <span>வேல்கடம்பன்</span> &bull; <span>Velkadamban</span>
+        </a>
+        <a href="/" class="home-badge">&larr; Back to Home</a>
+    </header>
+
+    <main class="container">
+        <h1>Privacy Policy</h1>
+        <div class="app-meta">Tamil Calculator &bull; Mobile Application</div>
+
+        <ul class="meta-list">
+            <li><strong>Effective Date:</strong> September 13, 2026</li>
+            <li><strong>Application:</strong> Tamil Calculator (Android)</li>
+            <li><strong>Developer:</strong> Daarwin Kanna M (Velkadamban)</li>
+            <li><strong>Contact:</strong> <a href="mailto:velkadamban@gmail.com">velkadamban@gmail.com</a></li>
+        </ul>
+
+        <div class="highlight-box">
+            <span class="badge">Summary</span>
+            <p><strong>100% Offline & Private:</strong> Tamil Calculator does not collect, track, or share any personal information or device data.</p>
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>This Privacy Policy applies to the <strong>Tamil Calculator</strong> mobile application (the "Application") created and operated by <strong>Daarwin Kanna M</strong> ("Service Provider", "we", "us", or "our").</p>
+        <p>We respect your privacy and are committed to protecting it. This policy explains our practices regarding user data.</p>
+
+        <h2>2. No Data Collection</h2>
+        <p>Tamil Calculator is a standalone, offline utility application built to perform general arithmetic calculations and traditional Tamil unit conversions.</p>
+        <ul>
+            <li><strong>No Personal Information:</strong> We do not collect, request, or store any personal details such as names, email addresses, phone numbers, or account logins.</li>
+            <li><strong>No Tracking or Analytics:</strong> We do not track user behavior, app usage, sessions, or screen interactions.</li>
+            <li><strong>No Device Information:</strong> We do not collect IP addresses, device identifiers (e.g., IMEI, Android ID, Advertising ID), or operating system diagnostics.</li>
+            <li><strong>No Location Data:</strong> The Application never requests or accesses your geographic location.</li>
+        </ul>
+
+        <h2>3. Device Permissions & Network Access</h2>
+        <p>The Application does not require or request access to any sensitive Android permissions, including:</p>
+        <ul>
+            <li>No Internet access permission (the app operates completely offline)</li>
+            <li>No Camera or Microphone access</li>
+            <li>No Storage or Media access</li>
+            <li>No Contacts or Calendar access</li>
+            <li>No Location access</li>
+        </ul>
+
+        <h2>4. Third-Party Services & Advertising</h2>
+        <p>The Application does not use any third-party SDKs, advertising networks, or analytics providers (such as Google Analytics, Firebase Analytics, or AdMob). Calculations and unit conversions are processed entirely on your local device.</p>
+        <p>If you click on an external link in the app's menu (such as our website or documentation), that page will open in your device's web browser, which is governed by the respective website's privacy policy.</p>
+
+        <h2>5. Children’s Privacy</h2>
+        <p>Because the Application collects absolutely no personal information and requires no permissions, it is completely safe for users of all ages, including children. We comply with the Children's Online Privacy Protection Act (COPPA) and the General Data Protection Regulation (GDPR).</p>
+
+        <h2>6. Data Retention & Deletion</h2>
+        <p>Since we do not collect or store any user data on servers or in any database, there is no personal data to retain, manage, or delete.</p>
+
+        <h2>7. Changes to this Privacy Policy</h2>
+        <p>We may update our Privacy Policy periodically. Any updates will be posted to this page with a revised effective date. You are advised to review this page periodically for any changes.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or the Application, please contact us at:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:velkadamban@gmail.com">velkadamban@gmail.com</a></li>
+            <li><strong>Website:</strong> <a href="https://velkadamban.com" target="_blank" rel="noopener noreferrer">https://velkadamban.com</a></li>
+        </ul>
+
+        <div class="footer-note">
+            &copy; 2026 Daarwin Kanna M (Velkadamban). All rights reserved.
+        </div>
+    </main>
+</body>
+
+</html>

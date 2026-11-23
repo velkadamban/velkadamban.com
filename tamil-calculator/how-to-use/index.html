@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ் கணிப்பான் செயலி - எவ்வாறு பயன்படுத்துவது | Tamil Calculator</title>
+    <meta name="description" content="தமிழ் எண்களைக் கொண்ட அண்ட்ராய்டு கணிப்பான் செயலி (Tamil Calculator App) வெளியீடு மற்றும் எவ்வாறு பயன்படுத்துவது என்பதற்கான விளக்கம்.">
+    <link rel="canonical" href="https://velkadamban.com/tamil-calculator/how-to-use">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="தமிழ் கணிப்பான் செயலி வெளியீடு - எவ்வாறு பயன்படுத்துவது">
+    <meta property="og:description" content="தமிழ் எண்களைக் கொண்ட அண்ட்ராய்டு கணிப்பான் செயலி. பாரம்பரிய பின்னம், அறிவியல் கணிதம் மற்றும் பண்டைய அளவை மாற்றிகள்.">
+    <meta property="og:url" content="https://velkadamban.com/tamil-calculator/how-to-use">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Mukta+Malar:wght@400;500;600;700;800&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0d0f17;
+            --surface: #151824;
+            --surface-border: #232738;
+            --surface-card: #1c2030;
+            --text-primary: #f0f2f8;
+            --text-secondary: #a2a8bd;
+            --accent: #4e80ee;
+            --accent-hover: #3b6cd9;
+            --accent-gradient: linear-gradient(135deg, #e65100, #ff9800);
+            --playstore-green: #01875f;
+            --playstore-hover: #016b4b;
+            --youtube-red: #ff0000;
+            --font-main: 'Mukta Malar', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-latin: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-title: 'Outfit', 'Mukta Malar', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.85;
+            font-size: 17px;
+            padding: 24px 16px 64px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header-bar {
+            max-width: 860px;
+            margin: 0 auto 32px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--surface-border);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .brand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: color 0.2s ease;
+        }
+
+        .brand-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-badge {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 6px 14px;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 20px;
+            font-family: var(--font-latin);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-badge:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 18px;
+            padding: 48px 40px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 28px 18px;
+            }
+        }
+
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 152, 0, 0.12);
+            color: #ffb74d;
+            border: 1px solid rgba(255, 152, 0, 0.3);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: var(--font-title);
+            font-size: 2.3rem;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .app-meta {
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 28px;
+            display: block;
+        }
+
+        .action-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin: 28px 0 36px 0;
+        }
+
+        .btn-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-playstore {
+            background: var(--playstore-green);
+            color: #ffffff;
+            border: 1px solid #02a172;
+        }
+
+        .btn-playstore:hover {
+            background: var(--playstore-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(1, 135, 95, 0.4);
+        }
+
+        .btn-youtube {
+            background: #251214;
+            color: #ffffff;
+            border: 1px solid rgba(255, 0, 0, 0.35);
+        }
+
+        .btn-youtube:hover {
+            background: #351518;
+            border-color: #ff3333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.25);
+        }
+
+        .btn-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .btn-youtube .btn-icon {
+            color: #ff3333;
+        }
+
+        .btn-text small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.85;
+            font-family: var(--font-latin);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-text strong {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .video-wrapper {
+            margin: 36px 0;
+            background: #000;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--surface-border);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .content-box {
+            background: var(--surface-card);
+            border: 1px solid var(--surface-border);
+            border-radius: 14px;
+            padding: 28px 26px;
+            margin-bottom: 28px;
+        }
+
+        p {
+            color: var(--text-primary);
+            margin-bottom: 18px;
+            font-size: 1.08rem;
+            text-align: justify;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 24px 0 28px 0;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            transition: border-color 0.2s ease;
+        }
+
+        .feature-item:hover {
+            border-color: rgba(78, 128, 238, 0.4);
+        }
+
+        .feature-item i {
+            color: #ff9800;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1.02rem;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .feature-item span {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: block;
+        }
+
+        .author-card {
+            margin-top: 36px;
+            padding: 24px 26px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--surface-border);
+            border-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .author-details h3 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .author-details .phone-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-family: var(--font-latin);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease;
+        }
+
+        .author-details .phone-link:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .salutation {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ff9800;
+            margin-bottom: 6px;
+        }
+
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .tag-pill {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-weight: 500;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--surface-border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            font-family: var(--font-latin);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-bar">
+        <a href="/" class="brand-link">
+            <span>வேல்கடம்பன்</span> &bull; <span>Velkadamban</span>
+        </a>
+        <div class="nav-actions">
+            <a href="/" class="nav-badge"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="/tamil-calculator/privacy-policy" class="nav-badge"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="badge-tag">
+            <i class="fa-solid fa-sparkles"></i> புதிய வெளியீடு (New Release)
+        </div>
+
+        <h1>தமிழ் கணிப்பான் செயலி வெளியீடு</h1>
+        <div class="app-meta">Tamil Calculator &bull; Android Application</div>
+
+        <!-- Direct CTA Buttons -->
+        <div class="action-cards">
+            <a href="https://play.google.com/store/apps/details?id=com.velkadamban.tamcal" target="_blank" rel="noopener noreferrer" class="btn-card btn-playstore">
+                <i class="fa-brands fa-google-play btn-icon"></i>
+                <div class="btn-text">
+                    <small>திறன்பேசியில் பதிவிறக்கம் செய்ய</small>
+                    <strong>Google Play Store இல் பெறுக</strong>
+                </div>
+            </a>
+            <a href="https://youtu.be/haLbZeKWxUg?si=Xa80GsGdY1N5V5Tr" target="_blank" rel="noopener noreferrer" class="btn-card btn-youtube">
+                <i class="fa-brands fa-youtube btn-icon"></i>
+                <div class="btn-text">
+                    <small>செயலி செயல்முறை விளக்கம்</small>
+                    <strong>YouTube வீடியோவில் காண்க</strong>
+                </div>
+            </a>
+        </div>
+
+        <!-- Embedded How-to-use Video -->
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/haLbZeKWxUg" 
+                    title="தமிழ் கணிப்பான் - எவ்வாறு பயன்படுத்துவது | How to Use Tamil Calculator" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Main Announcement Text Content -->
+        <div class="content-box">
+            <p>
+                தமிழ் எண்களை கொண்ட அண்ட்ராய்டு கணிப்பான் செயலியை (Calculator Android App) உருவாக்கி Play Store இல் வெளியிட்டுள்ளேன்.
+            </p>
+            <p>
+                கடந்த 2022 ஆம் வெளியிடப்பட்ட தமிழ் கணிப்பான் செயலியை விட மேம்படுத்தப்பட்டது இது.
+            </p>
+            <p>
+                இந்த செயலியின் மூலம் தமிழ் எண்களில் கணிதம் செய்யலாம். தமிழின் சிறப்புகளில் ஒன்று பின்னம் (Fractions) குறியீடுகள். ஒவ்வொரு பின்னதிற்கும் தனி தனி குறியீடுகளும் பெயர்களும் உண்டு. அவற்றையும் இச்செயலியின் மூலம் பயன்படுத்திக்கொள்ளலாம்.
+            </p>
+            <p>
+                கூடுதலாக, முக்கோணவியல் மற்றும் அறிவியல் சார்புகளையும் (Trigonometry & Scientific Functions) தமிழில் கணிதம் மேற்கொள்ள பயன்படுத்தும் வகையில் இச்செயலியை உருவாக்கியுள்ளேன்.
+            </p>
+            <p>
+                இவை மட்டுமின்றி இன்றைக்கு நாம் பயன்படுத்தும் கிலோ, கிராம், மீட்டர், போன்று பண்டைய காலத்தில் தமிழர்கள் நமக்கென்று அளவை பெயர்கள் (Measurement Units) இருந்தன. இன்றைக்கு பல நவீன கணிப்பான் செயல்களில் Converter என்ற பெயரில் நவீன அளவை மாற்றிகள் இருக்கும். அதை போலவே பண்டைய கால அளவைகளை ஒன்றில் இருந்து மற்றொன்றுக்கு மாற்றும், அளவை மாற்றியையும் இந்த செயலியின் மூலம் பயன்படுத்தலாம்.
+            </p>
+            <p>
+                தமிழ் எண்களை கற்கவும் பயன்படுத்தவும் இச்செயலி உதவியாக இருக்கும் என உறுதிப்பட எண்ணி தமிழ் கூறும் நல்லுலகிற்கு இச்செயலியை சமர்ப்பிக்கிறேன்.
+            </p>
+        </div>
+
+        <!-- Feature Highlights -->
+        <div class="feature-grid">
+            <div class="feature-item">
+                <i class="fa-solid fa-calculator"></i>
+                <strong>தமிழ் எண்களில் கணிதம்</strong>
+                <span>பாரம்பரிய தமிழ் எண்களைப் பயன்படுத்தி அடிப்படை கணிதச் செயல்பாடுகளை எளிதாகச் செய்யலாம்.</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-divide"></i>
+                <strong>பின்னம் (Fractions) குறியீடுகள்</strong>
+                <span>ஒவ்வொரு தமிழ் பின்னத்திற்குமான தனித்துவமான குறியீடுகள் மற்றும் பெயர்களுடன் கணிதம்.</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-square-root-variable"></i>
+                <strong>அறிவியல் & முக்கோணவியல்</strong>
+                <span>Trigonometry & Scientific Functions அனைத்தையும் தமிழில் மேற்கொள்ளும் வசதி.</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <strong>பண்டைய அளவை மாற்றி</strong>
+                <span>பண்டைய தமிழர்களின் தனித்துவமான அளவைகளை ஒன்றிலிருந்து மற்றொன்றாக மாற்றும் Converter.</span>
+            </div>
+        </div>
+
+        <!-- Author & Contact Box -->
+        <div class="author-card">
+            <div>
+                <div class="salutation">வாழ்க தமிழ்! வாழ்க தமிழ்நாடு!</div>
+                <div class="author-details">
+                    <p style="margin: 0; color: var(--text-secondary);">நன்றி,</p>
+                    <h3>வேல்கடம்பன்</h3>
+                    <a href="tel:+919489236687" class="phone-link">
+                        <i class="fa-solid fa-phone"></i> +91 94892 36687
+                    </a>
+                </div>
+            </div>
+            <div>
+                <a href="https://play.google.com/store/apps/details?id=com.velkadamban.tamcal" target="_blank" rel="noopener noreferrer" class="nav-badge" style="background: var(--surface-card); border-color: var(--accent); color: #fff; padding: 10px 18px;">
+                    <i class="fa-brands fa-android" style="color: #34d399;"></i> Install App
+                </a>
+            </div>
+        </div>
+
+        <!-- Hashtags -->
+        <div class="tags-row">
+            <span class="tag-pill">#தமிழ்நாட்டில்_உருவாக்கப்பட்டது</span>
+            <span class="tag-pill">#made_in_tamilnadu</span>
+            <span class="tag-pill">#தமிழ்_கணிப்பான்</span>
+            <span class="tag-pill">#TamilCalculator</span>
+        </div>
+
+        <div class="footer-note">
+            &copy; 2026 வேல்கடம்பன் (Velkadamban). All rights reserved.
+        </div>
+    </main>
+</body>
+
+</html>

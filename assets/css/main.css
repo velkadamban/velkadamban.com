@@ -514,6 +514,19 @@ h4,
     border-color: var(--glass-border-hover);
 }
 
+.text-link {
+    color: var(--accent-teal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    border-bottom: 1px solid transparent;
+}
+
+.text-link:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--accent-teal);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
